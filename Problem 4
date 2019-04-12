@@ -1,0 +1,17 @@
+#take a DNA sequence and calculate the dinucleotide frequency
+s = "AAAAAAAGGGGGGGTTTTTTTTCCCCCC"
+t = list()
+dinucleotide = {'AA': 0, 'AG': 0, 'AT': 0, 'AC': 0, 'GG': 0, 'GC': 0, 'GT': 0, 'GA': 0, 'TT': 0, 'TG': 0, 'TC': 0, 'TA': 0, 'CC': 0, 'CG': 0, 'CT': 0, 'CA': 0}
+i = 0
+
+
+while i < len(s)-1:
+    t.append(str(s[i]))
+    t.append(str(s[i+1]))
+    str1 = ''.join(t)
+    dinucleotide[str1] += 1
+    i = i + 1
+    del t[0]
+    del t[0]
+
+print dinucleotide  
